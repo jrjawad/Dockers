@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  nginx:
+    build:
+      context: ./nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - site1
+
+  site1:
+    build:
+      context: ./site1
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./site1:/app
+      - ./site1/UploadFiles:/app/UploadFiles
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
