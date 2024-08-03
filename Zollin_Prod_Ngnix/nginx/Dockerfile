@@ -13,8 +13,8 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # Copy the Supervisor configuration file
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Expose port 80
-EXPOSE 80
+# Expose port 5000
+EXPOSE 5000
 
 # Ensure that the UploadFiles directory has the correct permissions
 RUN mkdir -p /app/UploadFiles && chmod -R 777 /app/UploadFiles
