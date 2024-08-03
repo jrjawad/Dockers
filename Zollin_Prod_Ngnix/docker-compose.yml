@@ -16,6 +16,5 @@ services:
       - "5001:5000"
     volumes:
       - ./site1:/app
-      - ./site1/UploadFiles:/app/UploadFiles
     environment:
       - ASPNETCORE_ENVIRONMENT=Production

@@ -1,0 +1,1 @@
+docker run -d -p 80:80 --name myaspnetcoreapp -v /home/ubuntu/newapp:/app aspnetcore-nginx-app
